@@ -1,9 +1,7 @@
 package first100.billiardsGame01;
 
-import sun.awt.image.ToolkitImage;
-
-import java.awt.*;
 import javax.swing.*;
+import java.awt.*;
 
 /**
  * @Author: huangxinjian
@@ -11,7 +9,7 @@ import javax.swing.*;
  * @Date: Created in 0:35 2019/1/25
  * @Modified By:
  */
-public class BallGame extends JFrame{
+public class BallGame2 extends JFrame{
 
     Image ball = Toolkit.getDefaultToolkit().createImage("images/billiards_Image01/ball.png");
     Image table = Toolkit.getDefaultToolkit().createImage("images/billiards_Image01/table.jpg");
@@ -19,21 +17,22 @@ public class BallGame extends JFrame{
     double y= 100;
     boolean right = true; //小球往右走的控制变量
 
+    double degree = 3.14/3;  //弧度，这表明是60度
+
     public void paint(Graphics g){
         System.out.println("窗口被画了一次");
         g.drawImage(table,0,0,null);
         g.drawImage(ball,(int)x,(int)y,null);
 
-        if (right){  //向右走，直到桌面就弹回来
-            x+=10;  //窗口不断被渲染，小球位置不断改变
-        }else{
-            x-=10;
+        x = x + 10 * Math.cos(degree);
+        y = y + 10 * Math.sin(degree);
+
+        if (y >= 500-40-30 || y <= 40+40 ){  //后面的40+40是一个是桌面宽度，一个是边框宽度
+            degree = -degree;
         }
 
-        if (x >= 856-40-30){
-            right = false;
-        }else if (x <= 30){
-            right=true;
+        if ( x >= 856-40-30 || x <= 40 ){
+            degree = 3.14 - degree;
         }
     }
 
@@ -56,7 +55,7 @@ public class BallGame extends JFrame{
 
     public static void main(String args[]){
         System.out.println("今天是黄欣健第一次复习java基础知识");
-        BallGame ballGame = new BallGame();
+        BallGame2 ballGame = new BallGame2();
         ballGame.launchFrame();
     }
 }
