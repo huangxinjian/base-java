@@ -1,4 +1,4 @@
-package first100.Constant05;
+package first100.constant05;
 
 /**
  * @Author: huangxinjian
