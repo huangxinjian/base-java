@@ -10,3 +10,4 @@ base_java.iml
 *.njsproj
 *.sln
 *.sw*
+*.bak

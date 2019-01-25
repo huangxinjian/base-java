@@ -1,8 +1,9 @@
 /out
+base_java.iml
 
 # Editor directories and files
 .idea
-.iml
+
 .vscode
 *.suo
 *.ntvs*
