@@ -27,5 +27,12 @@ public class StringConcatenator {
          */
         System.out.println(a+b+c); //输出 345
 
+        /*
+        但是 如果我们使用 char 来进行运算，则会换成十进制
+         */
+        char d = '4';
+        int e = 5;
+        System.out.println(d + e); // d 转化成十进制是 52
+
     }
 }
