@@ -7,4 +7,8 @@ package controlstatement;
  * @Modified By:
  */
 public class TestIfElse {
+
+    public static void main(String[] args) {
+
+    }
 }
