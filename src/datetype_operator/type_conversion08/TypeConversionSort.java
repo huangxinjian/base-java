@@ -29,7 +29,7 @@ public class TypeConversionSort {
         /*
         自动类型转换:
          */
-        float f1 = 314L;
+        float f1 = 314L; // long自动转换成float
         //long l1 = 3.14f; 这里就会编译报错
 
         float f2 = 3/2;
