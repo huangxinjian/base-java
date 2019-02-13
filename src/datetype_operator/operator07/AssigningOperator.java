@@ -26,5 +26,7 @@ public class AssigningOperator {
         a=3;
         a*=b+3;//相当于a=a*(b+3)
         System.out.println("a="+a+"\nb="+b);
+
+
     }
 }
