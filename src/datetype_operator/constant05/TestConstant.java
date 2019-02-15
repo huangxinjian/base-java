@@ -14,7 +14,7 @@ public class TestConstant {
         /*
         java中的常量通常使用关键字 final 来修饰
 
-               使用 final 修饰的成为 符号常量,
+               使用 final 修饰的称为 符号常量,
          */
 
         age = 10; //现在的age是可以被修改的
