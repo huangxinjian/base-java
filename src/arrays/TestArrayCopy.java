@@ -1,5 +1,7 @@
 package arrays;
 
+import java.util.Arrays;
+
 /**
  * @Author: huangxinjian
  * @Description:  测试数组的拷贝
@@ -9,7 +11,7 @@ package arrays;
 public class TestArrayCopy {
 
     public static void main(String[] args) {
-        testBasicCopy2();
+        testBasicCopy();
 
     }
 
@@ -23,8 +25,21 @@ public class TestArrayCopy {
          */
         System.arraycopy(b,0,a,0,1);
 
-        for (int i: a) {
-            System.out.println(i);
+
+        /**
+         * public static int[] copyOf(int[] original, int newLength) {
+         *         int[] copy = new int[newLength];
+         *         System.arraycopy(original, 0, copy, 0,
+         *                          Math.min(original.length, newLength));
+         *         return copy;
+         *     }
+         *
+         *     copyOf 的底层实现
+         */
+        b = Arrays.copyOf(b,5);  //数组扩容
+
+        for (int i: b) {
+            System.out.print(i+" ");
         }
     }
 
@@ -36,7 +51,7 @@ public class TestArrayCopy {
         System.arraycopy(b,4,b,2,2);
 
         for (int i: b) {
-            System.out.println(i);
+            System.out.print(i+" ");
         }
     }
 }
