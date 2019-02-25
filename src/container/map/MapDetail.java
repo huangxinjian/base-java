@@ -31,7 +31,7 @@ public class MapDetail {
                 boolean isEmpty()                         Map是否为空
                 void putAll(Map t)                        将t的所有键值对存放到本Map对象
                 void clear()                              清除本Map对象所有键值对
-
+                Set  keySet()                             返回key对象的set集合
 
 
      */
