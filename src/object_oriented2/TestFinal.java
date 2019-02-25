@@ -18,6 +18,13 @@ public class TestFinal {
           final修饰的方法不能被重写，但是可以被重载
 
           final修饰的类不能被继承
+
+
+        final表示这个变量只能被赋值一次，一旦被赋值之后，就不能够被更改了。
+
+        如果经常希望某个常量可以在一个类中的多个方法使用，可以把这个常量称为 类常量，可以使用关键字 static final 修饰。
+            注意：类常量的定义位于 成员变量的位置
+
      */
     public static void main(String[] args) {
 
