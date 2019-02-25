@@ -26,11 +26,11 @@ public class ContainerIntroduce {
 
                            <<interface>>                       <<interface>>
                             Collection                              Map
-                         /               \                           |
-                 <<interface>>      <<interface>>                 HashMap
+                         /               \                          /  \
+                 <<interface>>      <<interface>>            TreeMap    HashMap
                       Set                List
-                       |                /    \
-                    HashSet       ArrayList  LinkedList
+                     /   \                /    \
+              TreeSet     HashSet   ArrayList  LinkedList
 
 
             其中 set 集合 和 List 集合的区别就在于：
