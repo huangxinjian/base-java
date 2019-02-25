@@ -43,6 +43,7 @@ public class RelationalOperator {
             1. = 是赋值运算符，而 == 是关系运算符
             2. ==、!= 是所有（基本类型和引用类型）数据类型都可以使用
             3. >=、<=、>、< 仅针对 基本数据类型中的数值类型（short byte int long float double ）以及 char 类型，boolean类型不能使用
+            4. == 比较的是栈中的值
          */
     }
 }
