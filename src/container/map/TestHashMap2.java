@@ -5,13 +5,25 @@ import java.util.Map;
 
 /**
  * @Author: huangxinjian
- * @Description:
+ * @Description:  HashMap支持null键和null值
  * @Date: Created in 17:17 2019/2/19
  * @Modified By:
  */
 public class TestHashMap2 {
 
     public static void main(String[] args) {
+
+        HashMap<String, Integer> hs = new HashMap<String, Integer>();
+        hs.put("一", 1);
+        hs.put("二", 2);
+        hs.put("三", null);
+        hs.put(null, null);
+
+        // 都可以存取null，所以不可以通过ge()返回值来判断键是否为null
+        System.out.println(hs.get("三"));
+        System.out.println(hs.get(null));
+
+
 
         Employee employee = new Employee(1001,"黄欣健",5000);
         Employee employee2 = new Employee(1002,"黄健",500);

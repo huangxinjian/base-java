@@ -50,5 +50,8 @@ public class TestHashMap1 {
             HashMap和HashTable的区别：
                 1. HashMap 线程不安全，效率高，允许 key 或 value 为null
                 2. HashTable 线程安全，效率低，不允许 key或value 为null
+                    if (value == null) {   底层源码
+                        throw new NullPointerException();
+                    }
      */
 }
