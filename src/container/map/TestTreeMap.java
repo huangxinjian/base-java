@@ -6,6 +6,8 @@ import java.util.TreeMap;
 /**
  * @Author: huangxinjian
  * @Description:  测试 treeMap
+ *
+ *  TreeMap不支持null键，但是支持null值
  * @Date: Created in 9:35 2019/2/25
  * @Modified By:
  */
@@ -31,6 +33,15 @@ public class TestTreeMap {
          */
 
     public static void main(String[] args) {
+
+        Map<String, Integer> ts = new TreeMap<>();
+        ts.put("一", 1);
+        ts.put("二", 2);
+        ts.put("三", null);
+        // ts.put(null, 4);  Exception in thread "main" java.lang.NullPointerException
+        System.out.println(ts.get("三"));
+        // System.out.println(ts.get(null));  Exception in thread "main" java.lang.NullPointerException
+
 
         Map<Integer,String> map = new TreeMap<>();
         map.put(20,"aa");
